@@ -1,0 +1,12 @@
+<div class="ajout-gossip">
+	<h1>Taper votre gossip</h1>
+	<%= form_tag url_for(action: 'add_gossip'),method: 'post' do %>
+	<%= label_tag 'author' %>
+	<%= text_field_tag 'author',"" ,:class => "form-control" %>
+	<%= label_tag 'content' %>
+	<%= text_area_tag 'content',"",:class => "form-control" %>
+
+	<%= submit_tag 'Envoyer',:class => "btn btn-success" %>
+	<% end %>
+
+</div>

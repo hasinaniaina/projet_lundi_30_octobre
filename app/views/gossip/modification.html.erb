@@ -1,0 +1,12 @@
+<div class="ajout-gossip">
+	<h1>Modifier votre Gossip</h1>
+	<%= form_tag '/gossip/updated_gossip', method: 'post' do %>
+	<%= hidden_field_tag 'id',@gossip.id,:class => "form-control" %>
+	<%= label_tag 'author' %>
+	<%= text_field_tag 'author',@gossip.author,:class => "form-control" %>
+	<%= label_tag 'content' %>
+	<%= text_area_tag 'content',@gossip.content,:class => "form-control" %>
+	<%= submit_tag 'Envoyer',:class => "btn btn-success" %>
+	<% end %>
+
+</div>
